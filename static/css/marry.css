@@ -1,0 +1,148 @@
+
+/*スクロールバー非表示（Chrome・Safari）*/
+.content::-webkit-scrollbar{
+  display:none;
+}
+
+html {
+  background: linear-gradient(#191970,#52006b);
+	height: 100%;
+  
+  /*上下方向にはみ出した要素を隠す*/
+  overflow-y: hidden ;
+  /*スクロールバー非表示（IE・Edge）*/
+  -ms-overflow-style: none;
+  /*スクロールバー非表示（Firefox）*/
+  scrollbar-width: none;
+}
+
+.circle {
+   width: 20px;
+   height: 20px;
+   background: white;
+   border-radius: 50px;
+   margin: 200px auto;
+   box-shadow: 0 0 10px #f0f400 inset;
+}
+
+.frame {
+	width: 80%;
+	height: 200px;
+	border: 2px solid #FFF;
+	margin: 0 auto;
+}
+
+.star1 {
+  width: 5px;
+  height: 5px;
+  background-color: transparent;
+  border-radius: 50%;
+  
+  position:absolute;
+  top: 5px;
+  left: 59px;
+
+  animation-name: starLight;
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.shoothing {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  
+   position:absolute;
+  top: 5px;
+  left: 59px;
+
+  animation-name: shootingStar;
+  animation-iteration-count: 1;
+  animation-duration: 0.5s;
+  animation-fill-mode:forwards;
+}
+
+@keyframes starLight1 {
+  0% {
+    background-color: white;
+    transform: scale(0.5, 0.5);
+  }
+
+  100% {
+    background-color: yellow;
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes starLight2 {
+  0% {
+    background-color: yellow;
+    transform: scale(0.5, 0.5);
+  }
+
+  100% {
+    background-color: white;
+    transform: scale(1.0, 1.0);
+  }
+}
+
+@keyframes starLight3 {
+  0% {
+    background-color: white;
+    transform: scale(0.5, 0.5);
+  }
+
+  100% {
+    background-color: purple;
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes shootingStar1 {
+  0% {
+    transform: translate(0px,0px);
+  }
+  
+  90%{
+  	 background-color: white;
+  }
+
+  100% {
+    background-color: transparent;
+     transform: translate(-200px,200px);
+     display: none;
+  }
+}
+
+@keyframes shootingStar2 {
+  0% {
+    transform: translate(0px,0px);
+  }
+  
+  90%{
+  	 background-color: white;
+  }
+
+  100% {
+    background-color: transparent;
+     transform: translate(-200px,200px);
+     display: none;
+  }
+}
+
+@keyframes shootingStar3 {
+  0% {
+    transform: translate(0px,0px);
+  }
+  
+  90%{
+  	 background-color: white;
+  }
+
+  100% {
+    background-color: transparent;
+     transform: translate(-300px,300px);
+     display: none;
+  }
+}
